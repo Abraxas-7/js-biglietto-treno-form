@@ -1,3 +1,6 @@
+<!-- PAGINA NON RESPONSIVE NON RIMPICCIOLIRE O ESPLODE TUTTO -->
+<!-- MI SONO DIVERTITO ABBASTANZA CON QUESTO ESERCIZIO CI HO PRESO LA MANO -->
+
 <!DOCTYPE html>
 
 <html lang="it">
@@ -20,42 +23,42 @@
             <form class="row g-4">
                 <div class="col-12">
                     <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nome" name="nome" required>
+                    <input type="text" class="form-control" id="clientName" name="clientName" required>
                 </div>
                 
                 <div class="col-12">
                     <label for="cognome" class="form-label">Cognome</label>
-                    <input type="text" class="form-control" id="cognome" name="cognome" required>
+                    <input type="text" class="form-control" id="clientSurname" name="clientSurname" required>
                 </div>
                 
                 <div class="col-12">
                     <label for="km" class="form-label">Km da percorrere</label>
-                    <input type="number" class="form-control" id="km" name="km" required>
+                    <input type="number" class="form-control" id="distance" name="distance" required>
                 </div>
                 
                 <div class="col-12">
                     <label for="eta" class="form-label">Età</label>
-                    <select class="form-select" id="eta" name="eta" required>
+                    <select class="form-select" id="age" name="age" required>
                         <option value="">--</option>
-                        <option value="junior">Junior (Under 18)</option>
-                        <option value="adult">Adult</option>
-                        <option value="senior">Senior (over 65)</option>
+                        <option value="17">Junior (Under 18)</option>
+                        <option value="30">Adult</option>
+                        <option value="70">Senior (over 65)</option>
                     </select>
                 </div>
                 
                 <div class="row g-3 d-flex justify-content-evenly">
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary w-100">Invia</button>
+                        <button id="submit" type="submit" class="btn btn-primary w-100">Invia</button>
                     </div>
                     
                     <div class="col-4">
-                        <button type="submit" class="btn btn-primary w-100">Annulla</button>
-                    </div>a
+                        <button id="reset" type="submit" class="btn btn-primary w-100">Annulla</button>
+                    </div>
                 </div>
             </form>
         </div>
 
-        <div id="ticket" class="d-none d-flex flex-column align-items-center p-5 card rounded-5" style="min-height: 500px;">
+        <div id="ticket" class="d-none col-5 d-flex flex-column align-items-center p-5 card rounded-5" style="min-height: 500px;">
             <div class="d-flex justify-content-center align-items-center mb-4">
                 <img class="d-inline mx-3 mylogo" src="./img/logo.png" alt="logo">
                 <h2>Ticket</h2>
@@ -63,13 +66,13 @@
         
             <div class="flex-grow-1 w-100">
                 <div class="row d-flex justify-content-between border-bottom p-3">
-                    <div class="col-6"><span class="fw-bold">Nome</span> </div>
-                    <div class="col-6"><span class="fw-bold">Cognome</span> </div>
+                    <div id="ticketName" class="col-6"> </div>
+                    <div id="ticketSurname" class="col-6"> </div>
                 </div>
 
                 <div class="row d-flex justify-content-between border-bottom p-3">
-                    <div class="col-6"><span class="fw-bold">Km</span> </div>
-                    <div class="col-6"><span class="fw-bold">Prezzo</span> </div>
+                    <div id="ticketKm" class="col-6"> </div>
+                    <div id="ticketPrice" class="col-6"> </div>
                 </div>
                 
                 <div class="row d-flex justify-content-between border-bottom p-3">
@@ -98,5 +101,7 @@
             </div>
         </div>
     </main>
+
+    <script src="./script/script.js"></script>
 </body>
 </html>
