@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="it">
+<head>
+  <title>ArbiExpres</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="d-flex align-items-center justify-content-center vh-100">
+    <main class="container row g-5 d-flex justify-content-evenly">
+        <div id="ticketPurchase" class="col-12 d-flex flex-column justify-content-center align-items-center p-5 card rounded-5">
+            <div class="d-flex justify-content-center align-items-center ">
+                <img class="d-inline mx-3 mylogo" src="./img/logo.png" alt="logo">
+                <h1>ArbiExpres</h1>
+            </div>
+
+            <form class="row g-4">
+                <div class="col-12">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required>
+                </div>
+                
+                <div class="col-12">
+                    <label for="cognome" class="form-label">Cognome</label>
+                    <input type="text" class="form-control" id="cognome" name="cognome" required>
+                </div>
+                
+                <div class="col-12">
+                    <label for="km" class="form-label">Km da percorrere</label>
+                    <input type="number" class="form-control" id="km" name="km" required>
+                </div>
+                
+                <div class="col-12">
+                    <label for="eta" class="form-label">Età</label>
+                    <select class="form-select" id="eta" name="eta" required>
+                        <option value="">--</option>
+                        <option value="junior">Junior (Under 18)</option>
+                        <option value="adult">Adult</option>
+                        <option value="senior">Senior (over 65)</option>
+                    </select>
+                </div>
+                
+                <div class="row g-3 d-flex justify-content-evenly">
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary w-100">Invia</button>
+                    </div>
+                    
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-primary w-100">Annulla</button>
+                    </div>a
+                </div>
+            </form>
+        </div>
+
+        <div id="ticket" class="d-none d-flex flex-column align-items-center p-5 card rounded-5" style="min-height: 500px;">
+            <div class="d-flex justify-content-center align-items-center mb-4">
+                <img class="d-inline mx-3 mylogo" src="./img/logo.png" alt="logo">
+                <h2>Ticket</h2>
+            </div>
+        
+            <div class="flex-grow-1 w-100">
+                <div class="row d-flex justify-content-between border-bottom p-3">
+                    <div class="col-6"><span class="fw-bold">Nome</span> </div>
+                    <div class="col-6"><span class="fw-bold">Cognome</span> </div>
+                </div>
+
+                <div class="row d-flex justify-content-between border-bottom p-3">
+                    <div class="col-6"><span class="fw-bold">Km</span> </div>
+                    <div class="col-6"><span class="fw-bold">Prezzo</span> </div>
+                </div>
+                
+                <div class="row d-flex justify-content-between border-bottom p-3">
+                    <div class="col-6"><span class="fw-bold">Partenza:</span> Roma Termini</div>
+                    <div class="col-6"><span class="fw-bold">Arrivo:</span> Milano Centrale</div>
+                </div>
+                
+                <div class="row d-flex justify-content-between border-bottom p-3">
+                    <div class="col-6"><span class="fw-bold">Data:</span> 12/11/2024</div>
+                    <div class="col-6"><span class="fw-bold">Ora:</span> 10:15</div>
+                </div>
+                
+                <div class="row d-flex justify-content-between border-bottom p-3">
+                    <div class="col-6"><span class="fw-bold">Treno:</span> Frecciarossa 9500</div>
+                    <div class="col-6"><span class="fw-bold">Posto:</span> Carrozza 3, Posto 22</div>
+                </div>
+                
+                <div class="row d-flex justify-content-between border-bottom p-3">
+                    <div class="col-12"><span class="fw-bold">Biglietto n.:</span> 000123456789</div>
+                </div>
+            </div>
+        
+            <div class="text-center mt-4">
+                <img src="./img/barcode.gif" alt="000123456789">
+                <p>Termini e condizioni...</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
