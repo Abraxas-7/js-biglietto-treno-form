@@ -1,6 +1,17 @@
+/*
+    non so come ma mi aveva mangato le prime due line di codice (LINEA 8 e 9), ora l'ho corretto,
+    COMUNQUE QUANDO VEDETE CHE NON FUNZIONA MANDATELO UN FEEDBACK, SE NON AVETE VOGLIA DI TROVARE IL PROBLEMA FA NIENTE ME LO
+    RIGUARDO DA SOLO, PERO' DITEMELO PER TEMPO, NON E' POSSIBILE CHE SCOPRO CHE CERANO PROBLEMI LUNEDI MATTINA QUANDO L'ESERCIZIO
+    L'HO CONSEGNATO VENERDI POMERIGIO (ANCHE PERCHE' NON SONO UNO STOLTO QUANDO HO PUSHATO HO FATTO TUTTE LE PROVE DEL CASO E FUNZIONAVA TUTTO) 
+*/
+
+let submitButton = document.getElementById("submit");
+let resetButton = document.getElementById("reset");
+
 // funzione per generare il biglietto
-submitButton.addEventListener("click", (e) => {
-    e.preventDefault();
+submitButton.addEventListener("click", () => {
+    event.preventDefault()
+
     // prezzo per km
     const kmPrice = 0.21; 
     // valore dell'input del nome
@@ -8,7 +19,7 @@ submitButton.addEventListener("click", (e) => {
     // valore dell'input del cognome
     let clientSurname = document.getElementById("clientSurname").value;
     // valore dell'input della distanza
-    let distance = document.getElementById("distance").value;
+    let distance = parseFloat(document.getElementById("distance").value);
     // valore dell'input dell'et
     let age = document.getElementById("age").value;
 
@@ -46,7 +57,7 @@ submitButton.addEventListener("click", (e) => {
 });
 
 // funzione per resettare il tutto
-resetButton.addEventListener("click", (e) => {
+resetButton.addEventListener("click", () => {
     // ricarica la pagina
     location.reload();
 });
